@@ -45,7 +45,7 @@ const handler: Handler = async (
   context: HandlerContext
 ) => {
   const headers = {
-    "Access-Control-Allow-Origin": "http://localhost:5173",
+    "Access-Control-Allow-Origin": "*",
     "Access-Control-Allow-Headers": "Content-Type, x-token",
     "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE",
   }
@@ -87,7 +87,7 @@ const handler: Handler = async (
       statusCode: 200,
       body: JSON.stringify(ids),
       headers: {
-        "Access-Control-Allow-Origin": "http://localhost:5173",
+        "Access-Control-Allow-Origin": "*",
         "Content-Type": "application/json",
       },
     }
