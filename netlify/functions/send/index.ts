@@ -33,7 +33,7 @@ async function sendEmails(contacts: any[], data: NewsletterEmailOptions) {
       from: me,
       to: c.email,
       subject,
-      react: NewsletterEmail(data, c.first_name),
+      react: NewsletterEmail(data),
     }))
   )
   if (resp.error) throw resp.error.message

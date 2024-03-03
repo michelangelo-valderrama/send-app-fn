@@ -21,7 +21,7 @@ export type NewsletterEmailOptions = Post |
 { title: string, text: string, preview: string } |
 { post: Post, title: string, text: string, preview: string }
 
-export default function NewsletterEmail(options: NewsletterEmailOptions, firstName: string) {
+export default function NewsletterEmail(options: NewsletterEmailOptions) {
   let title = ""
   let preview = ""
   let text = ""
@@ -30,10 +30,7 @@ export default function NewsletterEmail(options: NewsletterEmailOptions, firstNa
   if ("link" in options) {
     title = `Nuevo artículo: ${options.title}`
     preview = options.description
-    text = `
-      <strong>¡Hola ${firstName}!</strong>
-      Solo te interrumpo para avisarte de mi último artículo :>
-    `
+    text = `He aquí mi nuevo artículo: <strong>${options.title}</strong>`
     post = {
       title: options.title,
       description: options.description,
